@@ -2953,16 +2953,7 @@ function rotate() {
 }
 document.write("");
 
-$("input").keypress(function (event) {
-  var keycode = event.keyCode ? event.keyCode : event.which;
-  if (keycode == "13") {
-    let x = $(this).val();
-    if (x !== "") {
-      x = x.replace(/ /g, ",");
-      window.location.href = "//dlhunt.xyz/search?q=title:" + x;
-    }
-  }
-});
+
 var yob = $(".comment-replybox-thread")
   .closest(".comment-thread")
   .parent("div")
