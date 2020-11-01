@@ -294,6 +294,12 @@ function mkencrypt(urls) {
         finalString +
         str.replace("url", obfs(al, key, true)).replace("quality", "1080p") +
         "<br><br>";
+    }else if (
+      al.match(/hdcam|hd cam|sunscreen|hdts|sun screen/gi) ) {
+      finalString =
+        finalString +
+        str.replace("url", obfs(al, key, true)).replace("quality", "HD Cam") +
+        "<br><br>";
     }
   }
   return '<div style="text-align: center;">' + finalString + "</div>";
@@ -406,12 +412,11 @@ let pr1 =
 
 let postMan = [
   "https://stonestorm.herokuapp.com/",
-  "https://stonestorm.herokuapp.com/",
-  " https://stdlhunt3.herokuapp.com",
+  "https://stdlhunt3.herokuapp.com",
   "https://orfreenom.herokuapp.com/",
 ];
 
-let pr2 = postMan[Math.floor(Math.random() * Math.floor(2))];
+let pr2 = postMan[Math.floor(Math.random() * Math.floor(3))];
 
 pr1 = pr2;
 
